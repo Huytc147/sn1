@@ -596,15 +596,15 @@ h2 {
   }
 }
 /* =============================================== */
-/* CSS CHO THIẾT BỊ DI ĐỘNG (RESPONSIVE) */
+/* CSS CHO THIẾT BỊ DI ĐỘNG (RESPONSIVE) - BẢN SỬA HOÀN CHỈNH */
 /* =============================================== */
 @media (max-width: 600px) {
   /* --- Chỉnh sửa các khối chính --- */
   .birthday_inner__stage,
   .birthday_inner__modal,
   .birthday_inner__wish-modal {
-    width: 95%; /* Chiếm 95% chiều rộng màn hình, không còn là 500px */
-    padding-left: 15px; /* Thêm khoảng đệm để nội dung không dính sát viền */
+    width: 95%;
+    padding-left: 15px;
     padding-right: 15px;
   }
 
@@ -616,57 +616,90 @@ h2 {
   .birthday_inner__stage h1,
   .birthday_inner__modal h1,
   .birthday_inner__wish-modal h1 {
-    font-size: 2.5rem; /* Giảm kích thước tiêu đề một chút */
+    font-size: 2.5rem;
   }
 
   .birthday_inner__stage h2,
   .birthday_inner__modal p {
-    font-size: 15px; /* Tăng kích thước chữ mô tả cho dễ đọc */
+    font-size: 15px;
     line-height: 1.7;
   }
 
   /* --- Chỉnh sửa chữ "Happy Birthday" --- */
   .birthday-text {
-    font-size: 3rem; /* Giảm kích thước cho vừa màn hình */
+    font-size: 3rem;
     margin: 20px 0;
   }
 
-  /* --- Chỉnh sửa phần chọn nguyên liệu --- */
+  /* --- SỬA LAYOUT KHU VỰC CHỌN NGUYÊN LIỆU --- */
   .birthday_inner__stage .options {
-    left: 0; /* Reset vị trí */
+    display: flex; /* Dùng Flexbox */
+    flex-direction: column; /* Xếp các mục theo chiều dọc */
+    align-items: center; /* Canh giữa */
+    gap: 20px; /* Khoảng cách giữa khu vực Sponges và Fillings */
+    left: 0;
     width: 100%;
   }
 
   .birthday_inner__stage .options .sponges,
   .birthday_inner__stage .options .fillings {
-    float: none; /* Bỏ float để chúng xếp chồng lên nhau */
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px; /* Thêm khoảng cách giữa 2 khu vực chọn */
+    float: none; /* Tắt float của desktop */
+    margin: 0;
+    position: relative; /* Giữ để định vị bộ đếm */
+    padding-top: 30px; /* Thêm khoảng trống ở trên cho bộ đếm */
+  }
+
+  /* Canh lề lại cho tiêu đề và bộ đếm */
+  .birthday_inner__stage .options h3 {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    text-align: left;
+  }
+
+  .birthday_inner__stage .options h5 {
+    position: absolute;
+    top: 0;
+    right: 10px; /* Đẩy bộ đếm sang phải */
+  }
+
+  /* Dàn các item nguyên liệu ra cho đẹp */
+  .birthday_inner__stage .options .item {
+    float: left; /* Giữ float để chúng xếp hàng ngang */
+    width: 33.33%; /* Chia đều 3 item trên 1 hàng */
+    padding: 0 5px; /* Thêm khoảng đệm */
+    margin-right: 0; /* Bỏ margin cũ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .birthday_inner__stage .options .item_inner {
+    margin-bottom: 8px;
   }
 
   /* --- Chỉnh sửa các nút --- */
   .birthday_inner__stage .startagain {
-    position: static; /* Bỏ vị trí tuyệt đối để không bị chồng chéo */
+    position: static;
     display: block;
     margin-top: 20px;
     text-align: center;
   }
 
   .final-buttons {
-    flex-direction: column; /* Xếp các nút cuối cùng theo chiều dọc */
+    flex-direction: column;
     gap: 15px;
   }
 
   .final-buttons .sa,
   .final-buttons .wish-btn {
-    width: 80%; /* Cho nút to ra để dễ bấm */
+    width: 80%;
     margin: 0 auto;
   }
   
-  /* --- Chỉnh vị trí muỗng trộn bột --- */
   .birthday_inner__stage .mix_spoon {
     left: 50%;
-    transform: translateX(-60%); /* Canh muỗng ra giữa hơn */
+    transform: translateX(-60%);
   }
 }
