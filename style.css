@@ -595,3 +595,78 @@ h2 {
     opacity: 1;
   }
 }
+/* =============================================== */
+/* CSS CHO THIẾT BỊ DI ĐỘNG (RESPONSIVE) */
+/* =============================================== */
+@media (max-width: 600px) {
+  /* --- Chỉnh sửa các khối chính --- */
+  .birthday_inner__stage,
+  .birthday_inner__modal,
+  .birthday_inner__wish-modal {
+    width: 95%; /* Chiếm 95% chiều rộng màn hình, không còn là 500px */
+    padding-left: 15px; /* Thêm khoảng đệm để nội dung không dính sát viền */
+    padding-right: 15px;
+  }
+
+  .birthday_inner__wish-modal {
+    width: 90%;
+  }
+
+  /* --- Chỉnh sửa văn bản để dễ đọc hơn --- */
+  .birthday_inner__stage h1,
+  .birthday_inner__modal h1,
+  .birthday_inner__wish-modal h1 {
+    font-size: 2.5rem; /* Giảm kích thước tiêu đề một chút */
+  }
+
+  .birthday_inner__stage h2,
+  .birthday_inner__modal p {
+    font-size: 15px; /* Tăng kích thước chữ mô tả cho dễ đọc */
+    line-height: 1.7;
+  }
+
+  /* --- Chỉnh sửa chữ "Happy Birthday" --- */
+  .birthday-text {
+    font-size: 3rem; /* Giảm kích thước cho vừa màn hình */
+    margin: 20px 0;
+  }
+
+  /* --- Chỉnh sửa phần chọn nguyên liệu --- */
+  .birthday_inner__stage .options {
+    left: 0; /* Reset vị trí */
+    width: 100%;
+  }
+
+  .birthday_inner__stage .options .sponges,
+  .birthday_inner__stage .options .fillings {
+    float: none; /* Bỏ float để chúng xếp chồng lên nhau */
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px; /* Thêm khoảng cách giữa 2 khu vực chọn */
+  }
+
+  /* --- Chỉnh sửa các nút --- */
+  .birthday_inner__stage .startagain {
+    position: static; /* Bỏ vị trí tuyệt đối để không bị chồng chéo */
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .final-buttons {
+    flex-direction: column; /* Xếp các nút cuối cùng theo chiều dọc */
+    gap: 15px;
+  }
+
+  .final-buttons .sa,
+  .final-buttons .wish-btn {
+    width: 80%; /* Cho nút to ra để dễ bấm */
+    margin: 0 auto;
+  }
+  
+  /* --- Chỉnh vị trí muỗng trộn bột --- */
+  .birthday_inner__stage .mix_spoon {
+    left: 50%;
+    transform: translateX(-60%); /* Canh muỗng ra giữa hơn */
+  }
+}
