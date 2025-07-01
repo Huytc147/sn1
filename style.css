@@ -594,9 +594,8 @@ h2 {
   to {
     opacity: 1;
   }
-}
-/* =============================================== */
-/* CSS CHO THIẾT BỊ DI ĐỘNG (RESPONSIVE) - BẢN SỬA HOÀN CHỈNH */
+}/* =============================================== */
+/* CSS CHO THIẾT BỊ DI ĐỘNG (BẢN SỬA LỖI CUỐI CÙNG) */
 /* =============================================== */
 @media (max-width: 600px) {
   /* --- Chỉnh sửa các khối chính --- */
@@ -607,7 +606,6 @@ h2 {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .birthday_inner__wish-modal {
     width: 90%;
   }
@@ -618,7 +616,6 @@ h2 {
   .birthday_inner__wish-modal h1 {
     font-size: 2.5rem;
   }
-
   .birthday_inner__stage h2,
   .birthday_inner__modal p {
     font-size: 15px;
@@ -631,48 +628,53 @@ h2 {
     margin: 20px 0;
   }
 
-  /* --- SỬA LAYOUT KHU VỰC CHỌN NGUYÊN LIỆU --- */
+  /* --- SỬA LAYOUT KHU VỰC CHỌN NGUYÊN LIỆU BẰNG FLEXBOX --- */
   .birthday_inner__stage .options {
-    display: flex; /* Dùng Flexbox */
-    flex-direction: column; /* Xếp các mục theo chiều dọc */
-    align-items: center; /* Canh giữa */
-    gap: 20px; /* Khoảng cách giữa khu vực Sponges và Fillings */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa khu Sponges và Fillings */
     left: 0;
     width: 100%;
   }
 
   .birthday_inner__stage .options .sponges,
   .birthday_inner__stage .options .fillings {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các item xuống dòng */
+    justify-content: space-between; /* Canh đều các item */
+    align-items: center;
     width: 100%;
-    float: none; /* Tắt float của desktop */
+    float: none;
     margin: 0;
-    position: relative; /* Giữ để định vị bộ đếm */
-    padding-top: 30px; /* Thêm khoảng trống ở trên cho bộ đếm */
+    position: static; /* Bỏ position cũ, không cần nữa */
+    padding: 0;
   }
 
-  /* Canh lề lại cho tiêu đề và bộ đếm */
+  /* Đặt tiêu đề và bộ đếm vào một hàng riêng ở trên */
+  .birthday_inner__stage .options h3,
+  .birthday_inner__stage .options h5 {
+    width: 50%; /* Chia đôi hàng trên cùng */
+    position: static; /* Bỏ position cũ */
+    margin-bottom: 15px; /* Tạo khoảng cách với các nút bên dưới */
+  }
   .birthday_inner__stage .options h3 {
-    position: absolute;
-    top: 0;
-    left: 10px;
     text-align: left;
   }
-
   .birthday_inner__stage .options h5 {
-    position: absolute;
-    top: 0;
-    right: 10px; /* Đẩy bộ đếm sang phải */
+    text-align: right;
   }
 
-  /* Dàn các item nguyên liệu ra cho đẹp */
+  /* Dàn các item nguyên liệu ra thành các hàng bên dưới */
   .birthday_inner__stage .options .item {
-    float: left; /* Giữ float để chúng xếp hàng ngang */
-    width: 33.33%; /* Chia đều 3 item trên 1 hàng */
-    padding: 0 5px; /* Thêm khoảng đệm */
-    margin-right: 0; /* Bỏ margin cũ */
+    float: none; /* TẮT FLOAT - RẤT QUAN TRỌNG */
+    width: 33.33%;
+    padding: 0 5px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
   }
   
   .birthday_inner__stage .options .item_inner {
