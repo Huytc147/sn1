@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Làm Bánh Sinh Nhật</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="birthday">
+      <div class="birthday_inner">
+        <!-- Main Modal -->
+        <div class="birthday_inner__modal">
+          <div class="modal_image">
+            <img src="/" alt="Modal Image" />
+          </div>
+          <div class="modal_content">
+            <h1>Title</h1>
+            <p>Content</p>
+            <button>OK, Let's go</button>
+          </div>
+        </div>
+
+        <!-- Wish Modal -->
+        <div class="birthday_inner__wish-modal">
+          <div class="modal_content">
+            <h1>Một lời chúc đặc biệt!</h1>
+            <p>Đây là nơi lời chúc của bạn sẽ xuất hiện.</p>
+            <button class="close-wish-modal">Tuyệt vời!</button>
+          </div>
+        </div>
+
+        <div class="birthday_inner__stage stage1">
+          <div class="intro_cake">
+            <img class="intro" src="/anh1.png" alt="Intro Cake" />
+          </div>
+          <button class="start">Let’s make a cake</button>
+        </div>
+
+        <div class="birthday_inner__stage stage2">
+          <h1>Let’s get mixing</h1>
+          <h2>
+            Tuyệt vời, bắt đầu thôi nào! Hãy cho vào bát trộn một chút đường dịu
+            dàng, vài giọt vani ký ức, một nhúm bột niềm vui và trứng tươi của
+            hy vọng. Khi mọi thứ đã sẵn sàng, nhấn nút "Trộn" — mỗi lần nhấn là
+            một vòng xoay yêu thương, cho đến khoảng 6 lần là lúc khi hỗn hợp
+            thật mịn màng và đầy hứa hẹn. Sẵn sàng chưa? Nhấn nút... và để phép
+            màu bắt đầu! 🎂✨
+          </h2>
+          <div class="mix">
+            <div class="mix_bowl">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/bowl.png"
+                alt="Mixing Bowl"
+              />
+            </div>
+            <div class="mix_spoon">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/spoon.png"
+                alt="Spoon"
+              />
+            </div>
+          </div>
+          <button class="mixer">Click here to mix</button>
+        </div>
+
+        <div class="birthday_inner__stage stage3">
+          <h1>Let’s bake our base</h1>
+          <h2>
+            Được rồi, đã đến lúc đưa hỗn hợp vào lò nướng. Hãy nhẹ nhàng kéo
+            phần bột bánh vào chiếc lò nướng, rồi thư giãn, gác chân lên và tận
+            hưởng giây phút này, vì chiếc bánh của Vỹ đang dần chín trong hương
+            ấm ngọt ngào. 🍰✨
+          </h2>
+          <div class="oven">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven.png"
+              alt="Oven"
+            />
+          </div>
+          <div class="tin">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tin.png"
+              alt="Cake Tin"
+            />
+          </div>
+        </div>
+
+        <div class="birthday_inner__stage stage4">
+          <h1>Let’s make the cake</h1>
+          <h2>
+            Hãy tự do sáng tạo chiếc bánh theo cách của riêng Vỹ. Chọn nguyên
+            liệu u yêu thích — có thể là hai lớp bông lan vani, hay một chút
+            chocolate ngọt ngào. Vỹ được dùng tối đa 5 lớp đế và 6 lớp nhân, nên
+            cứ thoải mái pha trộn hương vị cho thật đậm đà. Khi chiếc bánh đã đủ
+            đầy như u mong muốn, hãy nhấn nút hoàn tất bên dưới để thắp lên
+            những ngọn nến và gửi gắm vào đó một điều ước thật đẹp cho sinh nhật
+            này. 🎂🕯️💫
+          </h2>
+
+          <!-- Birthday Text (Replaces SVG) -->
+          <h1 class="birthday-text">Happy 20<sup>th</sup> Birthday</h1>
+
+          <div class="options">
+            <div class="sponges inactive">
+              <h3>Sponges</h3>
+              <h5>
+                <span>0</span>
+                / 5
+              </h5>
+              <div class="item">
+                <div class="item_inner vanilla"></div>
+                <h4>Vanilla</h4>
+              </div>
+              <div class="item">
+                <div class="item_inner strawberry"></div>
+                <h4>Pink</h4>
+              </div>
+              <div class="item">
+                <div class="item_inner fruit"></div>
+                <h4>Fruit</h4>
+              </div>
+            </div>
+            <div class="fillings">
+              <h3>Fillings/icing</h3>
+              <h5>
+                <span>0</span>
+                / 6
+              </h5>
+              <div class="item">
+                <div class="item_inner jam"></div>
+                <h4>Jam</h4>
+              </div>
+              <div class="item">
+                <div class="item_inner cream"></div>
+                <h4>Cream</h4>
+              </div>
+              <div class="item">
+                <div class="item_inner choc"></div>
+                <h4>Choc</h4>
+              </div>
+              <div class="item">
+                <div class="item_inner lemon"></div>
+                <h4>Lemon</h4>
+              </div>
+            </div>
+          </div>
+          <div class="cakemake">
+            <div class="base"></div>
+          </div>
+          <div class="startagain">Start again</div>
+          <button class="add">Add the candle</button>
+
+          <!-- Final Buttons Container -->
+          <div class="final-buttons">
+            <button class="sa">Start again</button>
+            <button class="wish-btn">Nhận lời chúc</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
